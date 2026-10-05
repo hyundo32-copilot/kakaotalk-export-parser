@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kakao-export-parser"
+version = "0.1.0"
+description = "카카오톡 대화 내보내기(.txt) 파서 — 단톡방 대화에서 결정 노트를 만드는 AI 비서의 수집 모듈 프로토타입"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+kakao-export-parse = "kakao_export_parser.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
